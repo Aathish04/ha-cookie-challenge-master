@@ -1,0 +1,16 @@
+---
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Footer from "@components/Footer.astro";
+import Login from "@components/Login";
+import Header from "@components/Header.astro";
+---
+
+<Layout title={`Admin | ${SITE.title}`}>
+  <Header activeNav="admin" />
+  <Main pageTitle="Login" pageDesc="Wait a second, you're not Mr Robot">
+    <Login client:load  />
+  </Main>
+  <Footer />
+</Layout>
